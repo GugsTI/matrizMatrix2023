@@ -1,0 +1,74 @@
+<html>
+<head>
+  <title>matriz</title>
+  <h1 class="h1zin">Projeto 7 - matrizes</h1>
+  <br>
+</head>
+<body>
+  
+ 
+<script>
+   let infoNumMatriz1 = Number(prompt("Informe a matriz"))
+   let infoNumMatriz2 = Number(prompt("Informe a matriz"))
+   let infoNumMatriz3 = Number(prompt("Informe a matriz"))
+   let infoNumMatriz4 = Number(prompt("Informe a matriz"))
+   let infoNumMatriz5 = Number(prompt("Informe a matriz"))
+   let infoNumMatriz6 = Number(prompt("Informe a matriz"))
+   let infoNumMatriz7 = Number(prompt("Informe a matriz"))
+   let infoNumMatriz8 = Number(prompt("Informe a matriz"))
+   let infoNumMatriz9 = Number(prompt("Informe a matriz"))
+
+
+
+    function encontrarMaioresElementos(infoMatriz) {
+      const colunas = infoMatriz[0].length;
+      const vetorMaioresElementos = [];
+
+      for (let j = 0; j < colunas; j++) {
+        let maiorElemento = Math.abs(infoMatriz[0][j]);
+
+        for (let i = 1; i < infoMatriz.length; i++) {
+          const elementoAtual = Math.abs(infoMatriz[i][j]);
+
+          if (elementoAtual > maiorElemento) {
+            maiorElemento = elementoAtual;
+          }
+        }
+
+        vetorMaioresElementos.push(maiorElemento);
+      }
+
+      return vetorMaioresElementos;
+    }
+
+    function calcularMaioresElementos() {
+      const matriz =[
+        [infoNumMatriz1,infoNumMatriz2 ,infoNumMatriz3 ],
+        [infoNumMatriz4,infoNumMatriz5 ,infoNumMatriz6 ],
+        [infoNumMatriz7,infoNumMatriz8 ,infoNumMatriz9]
+        
+      ];
+      document.write(` Matriz: <br> [${infoNumMatriz1},${infoNumMatriz2},${infoNumMatriz3}]<br>
+      [${infoNumMatriz4},${infoNumMatriz5},${infoNumMatriz6}]<br>
+      [${infoNumMatriz7},${infoNumMatriz8},${infoNumMatriz9}]<br>`);
+      const vetorMaioresElementos = encontrarMaioresElementos(matriz);
+      document.write(`Maiores elementos são: ${vetorMaioresElementos}`);
+    }
+
+    // Chamada da função para cálculo dos maiores elementos
+    calcularMaioresElementos();
+  </script>
+
+  <style>
+    .h1zin{
+     margin-left: 42%;
+    };
+
+    
+    
+
+
+
+  </style>
+</body>
+</html>
